@@ -1,18 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Yatra+One&display=swap');
+
+
 body{
-	background: rgba(255, 200, 100, .5);
-	color: #0af;
+	font-family: 'Kiwi Maru', sans-serif;
+	font-weight: 300;
+	text-shadow: 1px 1px 2px #aaa;
 
 }
 
-body > header > h3{
-	background: #fff;
-	color:#0f0;
+body h1{
+	font-weight: 300;
+	margin: 20px 30px;
 }
 
-h3{
-	color: #000;
+#site-title{
+	font-family: 'Yatra One'
 }
 
-body h3{
+#main-header{
+	border-bottom: 2px solid #000;
+
+}
+
+#top-stories{
+	width: 1000px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+article{
+	width: 301px;
+	display: inline-block;
+	border: 1px solid #000;
+	padding: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.6);
+
+}
+
+article img{
+	width: 100%;
+	height: 100px;
+}
+
+.article-img{
+	height: 200px;
+	width: 100%;
+	background-size: cover !important;
+	background-position: center !important;
+}
+
+.more-link{
+	font-style: italic;
+}
+
+.bolded-link{
+	font-weight: 900;
+}
+
+.more-link.bolded-link{
 	color: #f00;
+}
+
+a{
+	text-decoration: underline overline;
 }
