@@ -12,6 +12,8 @@ body{
 body h1{
 	font-weight: 300;
 	margin: 20px 30px;
+	position: relative;
+    z-index: 10;
 }
 
 #site-title{
@@ -20,7 +22,21 @@ body h1{
 
 #main-header{
 	border-bottom: 2px solid #000;
+	position: absolute;
+	width: 100%;
+	background: rgba(255,255,255,.9);
+	top: 0px;
+}
 
+#main-header::before{
+	content: "";
+	display: block;
+	width: 40px;
+    height: 40px;
+    background: #ce4545;
+    position: absolute;
+    left: 20px;
+    z-index: 9;
 }
 
 #top-stories{
@@ -34,8 +50,13 @@ article{
 	display: inline-block;
 	border: 1px solid #000;
 	padding: 10px;
-	box-shadow: 5px 5px 10px rgba(0,0,0,.6);
+	box-shadow: 2px 2px 6px rgba(0,0,0,.3);
+	transition: box-shadow 500ms, background 3s;
+}
 
+article:hover{
+	box-shadow: 5px 5px 20px rgba(0,0,0,.7);
+	background: #aaa;
 }
 
 article img{
@@ -48,6 +69,10 @@ article img{
 	width: 100%;
 	background-size: cover !important;
 	background-position: center !important;
+}
+
+a:hover, a.more-link.bolded-link:hover{
+	color: #8f8;
 }
 
 .more-link{
@@ -64,4 +89,38 @@ article img{
 
 a{
 	text-decoration: underline overline;
+}
+
+.my-input{
+	display: block;
+	width: 90%;
+	margin: 10px;
+	padding: 10px 20px;
+	border-radius: 10px 20px;
+	border:1px solid #aaa;
+}
+
+.my-input:focus{
+	background: #d5ffc2;
+	color: #0f8034;
+	outline: none;
+
+}
+
+article:active{
+	opacity: .4;
+}
+
+.article-img{
+	height: 200px;
+	width: 200px;
+	border-radius: 100%;
+}
+
+.my-text{
+	height: 600px
+	max-height: 200px;
+	overflow: scroll;
+	overflow-x: hidden;
+	border: 2px solid #000;
 }
