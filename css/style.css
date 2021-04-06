@@ -22,22 +22,11 @@ body h1{
 
 #main-header{
 	border-bottom: 2px solid #000;
-	position: absolute;
 	width: 100%;
 	background: rgba(255,255,255,.9);
 	top: 0px;
 }
 
-#main-header::before{
-	content: "";
-	display: block;
-	width: 40px;
-    height: 40px;
-    background: #ce4545;
-    position: absolute;
-    left: 20px;
-    z-index: 9;
-}
 
 #top-stories{
 	width: 1000px;
@@ -94,7 +83,7 @@ a{
 .my-input{
 	display: block;
 	width: 90%;
-	margin: 10px;
+	
 	padding: 10px 20px;
 	border-radius: 10px 20px;
 	border:1px solid #aaa;
@@ -109,18 +98,4 @@ a{
 
 article:active{
 	opacity: .4;
-}
-
-.article-img{
-	height: 200px;
-	width: 200px;
-	border-radius: 100%;
-}
-
-.my-text{
-	height: 600px
-	max-height: 200px;
-	overflow: scroll;
-	overflow-x: hidden;
-	border: 2px solid #000;
 }
