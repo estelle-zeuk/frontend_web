@@ -80,21 +80,13 @@ a{
 	text-decoration: underline overline;
 }
 
-.my-input{
+.my-input, .my-textarea{
 	display: block;
 	width: 90%;
 	
 	padding: 10px 20px;
-	border-radius: 10px 20px;
-	border:1px solid #aaa;
 }
 
-.my-input:focus{
-	background: #d5ffc2;
-	color: #0f8034;
-	outline: none;
-
-}
 
 article:active{
 	opacity: .4;
