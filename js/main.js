@@ -1,12 +1,18 @@
 $(document).ready(function(){
 
+	/*gQuery("my-selector").addClass("mynewclass");
+
+	gQuery("#main").addClass("hello");*/
+
+	$("#main").find('p').addClass("paragraph");
+
 
 	$(document).on('contextmenu', function(){
 		return false;
 	});
 
-	$(document).on('mousedown', function(event){
-		event.preventDefault();
+	/*$(document).on('mousedown', function(event){
+		//event.preventDefault();
 
 		console.log(event.which);
 
@@ -44,9 +50,9 @@ $(document).ready(function(){
 			case 3:
 				console.log("Right click");
 				break;
-		}*/
+		}
+	});*/
 
-	});
 
 
 	$('[data-trigger="dropdown"]').on('mouseenter', function(){
@@ -92,7 +98,53 @@ $(document).ready(function(){
 
 	});
 
+	$('p:contains("Lorem")').html("This had Lorem in it");
 
+	$('p').each(function () {
+		console.log($(this).text());
+	});
+
+	$('input').css({
+		background: '#f00',
+		padding: '10px',
+		borderColor: '#000'
+	});
+
+
+	/*$('textarea').focusin(function(){
+		console.log("Focused in on the textarea");
+	});
+
+	$('textarea').focusout(function(){
+		console.log("Textarea has lost focus");
+	});
+
+
+
+
+	window.passed = 0;
+	window.hasAt = 0;
+	window.hasDot = 0;
+
+	$('input[name=email]').on('keyup', function(){
+		
+
+		if ($(this).val().indexOf('@') > -1) {
+			window.hasAt++;
+
+			if ($(this).val().indexOf('.') > -1) {
+			window.hasDot++;
+			}
+		}
+
+		if (window.hasAt > 1 && window.hasDot > 1) {
+			$('.status').html('Valid');
+		} else{
+			$('.status').html('invalid');
+		}
+
+
+	});*/
 
 
 

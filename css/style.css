@@ -149,3 +149,6 @@ article img{
 	display: block;
 }
 
+.status{
+	display: none;
+}
