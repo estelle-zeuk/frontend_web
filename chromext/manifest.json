@@ -1,0 +1,20 @@
+{
+	"name": "Youtube Downloader Simplified",
+	"description": "Download Youtube video simpler than before",
+	"version": "0.1",
+	"author": "Estelle Z",
+	"manifest_version": 2,
+	"web_accessible_resources": ["src/youtubed.js"],
+	"content_scripts": [
+		{
+			"matches": ["https://www.youtube.com/watch*"],
+			"js": ["src/loader.js"]
+		}
+	],
+	"permissions": [
+		"downloads"
+	],
+	"background": {
+		"scripts": ["src/background.js"]
+	}
+}
