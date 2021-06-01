@@ -39,12 +39,12 @@
 		<form class="col-md-8 my-form offset-md-2">
 			<h4 style="text-align: center;">Please, fill this form</h4>
 			<div class="mb-4">
-			    <label for="exampleInputText" class="form-label">Name<span class="obligatoire1">*</span></label>
-			    <input type="text" class="form-control" id="exampleInputText">
+			    <label for="inputNamne" class="form-label">Name<span class="obligatoire1" >*</span></label>
+			    <input type="text" class="form-control check_required" id="inputNamne" onblur="required_checked();">
 		  	</div>
 		  	<div class="mb-4">
-			    <label for="exampleInputText1" class="form-label">Pseudo<span class="obligatoire1">*</span></label>
-			    <input type="text" class="form-control" id="exampleInputText1" >
+			    <label for="inputPseudo" class="form-label">Pseudo<span class="obligatoire1 ">*</span></label>
+			    <input type="text" class="form-control check_required" id="inputPseudo" onblur="required_checked();">
 		  	</div>
 		  	<label class="form-check-label" for="flexRadioDefault2">
 			    Sex  &nbsp; &nbsp; &nbsp; &nbsp;  
@@ -58,7 +58,7 @@
 			  <label class="form-check-label" for="inlineRadio2">Female</label>
 			</div>
 			<div class="mb-3">
-			    <label for="exampleInputEmail1" class="form-label">City&nbsp; &nbsp; &nbsp; &nbsp;</label>
+			    <label for="exampleInputEmail2" class="form-label">City&nbsp; &nbsp; &nbsp; &nbsp;</label>
 			    <div class="form-check-inline">
 			  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
 			  <label class="form-check-label" for="flexCheckDefault">
@@ -87,13 +87,13 @@
 		  </div>
 			
 		  <div class="mb-4">
-		    <label for="exampleInputEmail1" class="form-label">Email address<span class="obligatoire1">*</span></label>
-		    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+		    <label for="inputEmail" class="form-label">Email address<span class="obligatoire1">*</span></label>
+		    <input type="email" class="form-control check_required" id="inputEmail aria-describedby="emailHelp" onblur="required_checked();">
 		    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 		  </div>
 		  <div class="mb-4">
-		    <label for="phoneNumber" class="form-label">Phone Number<span class="obligatoire1">*</span></label>
-		    <input type="number" class="form-control" id="phoneNumber">
+		    <label for="inputPhone" class="form-label">Phone Number<span class="obligatoire1">*</span></label>
+		    <input type="number" class="form-control check_required" id="inputPhone" onblur="required_checked();">
 		  </div>
 		  <label for="phoneNumber" class="form-label">Job Name<span class="obligatoire1">*</span></label>
 		  <select class="form-select" aria-label="Default select example">
@@ -111,7 +111,7 @@
 		    <label class="form-check-label" for="exampleCheck1">Check me out</label>
             <span class="obligatoire">(*)Required fields</span>
 		  </div>
-		  <button type="submit" class="btn btn-primary"><i class="fa fa-send-o"></i> Submit</button>
+		  <button id="submit-btn" type="submit" class="btn btn-primary" disabled><i class="fa fa-send-o"></i> Submit</button>
 		</form>
 	</div><br><br><br><br>
 
@@ -125,5 +125,7 @@
 </footer>
 <!-- Footer -->
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js""></script>
+<script src="myJs.js"></script>
 </body>
 </html>
